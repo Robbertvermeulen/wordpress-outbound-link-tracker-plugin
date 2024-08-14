@@ -12,6 +12,9 @@
 
 define('OLT_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('OLT_PLUGIN_URL', plugin_dir_url(__FILE__));
+define('OLT_PLUGIN_FILE', __FILE__);
+define('OLT_PLUGIN_VERSION', '1.0.0');
+define('OLT_PLUGIN_UPDATE_URL', 'https://www.epicwpsolutions.com/wp-update-server/?action=get_metadata&slug=wp-outbound-link-tracker');
 
 // Load composer
 require_once OLT_PLUGIN_DIR . 'vendor/autoload.php';
@@ -26,6 +29,7 @@ class Outbound_Link_Tracking_Plugin {
 
         register_activation_hook(__FILE__, [$this, 'plugin_activation']);
 
+        include OLT_PLUGIN_DIR . 'includes/updates.php';
         include OLT_PLUGIN_DIR . 'includes/link-tracking.php';
     }
 
