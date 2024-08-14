@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {
+      "EPICWP\\Outbound_Link_Tracking\\": "src/"
+    }
+  },
+  "require": {
+    "sinergi/browser-detector": "^6.1"
+  }
+}

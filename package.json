@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "scripts": {
+    "watch:admin:css": "npx tailwindcss -i ./assets/src/css/admin.css -o ./assets/css/admin.css --watch --config ./tailwind.admin.config.js",
+    "build:admin:css": "npx tailwindcss -i ./assets/src/css/admin.css -o ./assets/css/admin.css --config ./tailwind.admin.config.js"
+  }
+}
